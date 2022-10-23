@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/235/235349.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+
+        body {
+            background-color: #4b577e22;
+        }
+
+        input:required:valid {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Анкета</h1>
+        <p><img src=" https://i09.fotocdn.net/s107/fa59f3c5751d41af/public_pin_l/2349819482.jpg" alt="Фотография кошки">
+        </p>
+
+        <form id="catForm">
+            <div>
+                <label for="catname">Кличка</label>
+                <input type="text" id="catname" required minlength="2" maxlength="10" />*
+            </div>
+            <div>
+                <label for="name">ФИО владельца</label>
+                <input type="text" id="name" required>*
+            </div>
+            <div>
+                <label for="number">Введите телефон в формате +7-911-123-45-67:</label>
+                <input type="tel" id="number" minlength="10" maxlength="20" />*
+            </div>
+            <div>
+                <label for="poroda">Порода</label>
+                <select name="Порода" id="breed">
+                    <option value="Метис">Метис</option>
+                    <option value="Абиссинская">Абиссинская</option>
+                    <option value="Бенгальская">Бенгальская</option>
+                    <option value="Британская короткошёрстная"> Британская короткошёрстная</option>
+                    <option value="Мейн-кун"> Мейн-кун</option>
+                    <option value="Русская голубая">Русская голубая</option>
+                    <option value="Сиамская">Сиамская</option>
+                    <option value="Сибирская">Сибирская</option>
+                    <option value="Сфинкс">Сфинкс</option>
+                </select>
+            </div>
+            <div>
+                <p>Чем питается:</p>
+                <input type="checkbox" name="korm" value="Сухой корм" class="food" />Сухой корм<br />
+                <input type="checkbox" name="korm" value="Влажный корм" class="food" />Влажный корм<br />
+                <input type="checkbox" name="korm" value="Натуральный корм" class="food" />Натуральный корм<br />
+            </div>
+            <div>
+                <p>Пол:</p>
+                <p><input type="radio" name="s" value="male" required /> Самец</p>
+                <p><input type="radio" name="s" value="female" /> Самка</p>
+            </div>
+            <div>
+                <label for="age">Возраст питомца:</label>
+                <input type="number" id="age" required min="1" max="20" />*
+            </div>
+            <div>
+                <p>Комментарий:</p>
+                <p><textarea name="comments" rows="10" cols="60">Ваш комментарий</textarea></p>
+            </div>
+            <div>
+                <p>Ваш e-mail:</p>
+                <input type="email">*
+            </div>
+            <div>
+                <p>Прикрепить фото питомца <input type="file" /></p>
+            </div>
+            <div>
+                <button type="submit" id="ok">Сохранить</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
